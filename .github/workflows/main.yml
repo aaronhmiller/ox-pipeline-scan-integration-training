@@ -24,3 +24,11 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
+
+#      - name: Run OX Security Scan to check for vulnerabilities
+#        with:
+#          ox_api_key: ${{ secrets.OX_API_KEY }}
+#          ox_timeout: 3
+#          ox_fail_on_timeout: true
+#          ox_scan_full_branch: true
+#        uses: oxsecurity/ox-security-scan@main
